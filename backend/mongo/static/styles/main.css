@@ -1,0 +1,26 @@
+html {
+    box-sizing: border-box;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 62.5%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+body {
+
+    font-family: Lato, Open-Sans, Helvetica, Sans-Serif; /* never add percantages here */
+}
+h1, h2, h3, h4, h5 {
+    line-height: 1.2;
+    font-weight: 100;
+}
+
+a:link, a:visited,a:active {
+        text-decoratioN: none;
+        color: inherit;
+        
+}

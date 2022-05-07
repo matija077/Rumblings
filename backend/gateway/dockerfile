@@ -1,0 +1,17 @@
+FROM golang
+
+RUN mkdir /logging
+
+WORKDIR /gateway
+
+COPY go.mod ./
+
+RUN go mod download
+
+COPY . .
+
+
+RUN go build -o /gateway/build/gateway
+
+EXPOSE 8091
+ENTRYPOINT ["/gateway/build/gateway"]

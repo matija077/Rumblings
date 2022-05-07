@@ -1,0 +1,10 @@
+docker build -t frontend ./
+
+docker exec -it hash bash
+
+docker run -it --mount source=backendLogs, target=/logging -p 8090:8090 backend -rm 
+docker run -it -d -v backendLogs:/logging -p 8090:8090 backen
+
+docker run -it -p 8081:8081 frontend -rm
+
+docker rm ${docker ps --all -q}     

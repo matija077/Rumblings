@@ -1,0 +1,37 @@
+services:
+  'redis:
+    container_name: redis
+    image: redis
+    ports:
+      - "6379:6379"
+  mongo:
+    container_name: mongo
+    image: "mongo"
+    ports:
+    - '27017-27019:27017-27019'
+  sql-server:
+    container_name: sqlserver
+    image: mcr.microsoft.com/mssql/server:2017-latest
+    environment:
+      - SA_PASSWORD=Pass@word
+      - ACCEPT_EULA=Y
+    ports:
+      - "5434:1433"
+  backend:
+    build: ./backend
+    container_name: backend-docker
+    ports: 
+        - 7000:8080
+    restart: always
+    #links:
+        #- redis
+        #- mongo
+        #- sql-server
+  frontend:
+    container_name: frontend-docker
+    build: ./frontend
+    ports: 
+        - 7001:8081
+    restart: always
+    links:
+        - backend

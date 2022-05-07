@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> -
+    <!-- for html 4 or bellow -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="description" content="Free Web tutorials for HTML and CSS">
+    <meta name="author" content="John Doe">
+    <meta name=”robots” content="index, follow"> <!-- onl ywhen restrciting  -->
+    <title>This is the title of the page.</title>
+
+    <link preload rel="stylesheet" href="./styles/main.css" />
+    <script defer src="./js/main.js"></script>
+</head>
+
+<body>
+
+    <nav  onclick="onNavigationHandler(event)">
+        <button data-id="Search">
+            <h1>Search</h1>
+        </button>
+    </nav>
+    <h1>My First Heading</h1>
+
+    <p>My first paragraph.</p>
+
+    <form id="form" class="form">
+        <div class="form-form">
+            <label for="name">Enter your name: </label>
+            <input type="text" name="name" id="name" required>
+        </div>
+        <div class="form-form">
+            <label for="name">Enter your last name: </label>
+            <input type="text" name="last-name" id="last-name" required>
+        </div>
+        <div class="form-form">
+            <label for="email">Enter your email: </label>
+            <input type="email" name="email" id="email" required>
+        </div>
+        <div class="form-form">
+            <label for="email">Enter your SSN: </label>
+            <input type="number" name="ssn" id="ssn" required>
+        </div>
+        <div class="form-form">
+            <label for="email">Street: </label>
+            <input type="text" name="street" id="street" required>
+        </div>
+        <div class="form-form">
+            <label for="email">Date: </label>
+            <input type="date" name="date" id="date" required>
+        </div>
+        <div class="form-form">
+            <input type="submit" value="Send!">
+        </div>
+    </form>
+
+
+
+
+</body>
+
+</html>
